@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Shelf | bookshelfs.id</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/18740318f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="head-bar">
+    <div class="head-bar__logo">
+        <h1 class="head-bar__title">bookshelfs.id</h1>
+        <button class="toggle-button"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="head-bar__search toggle">
+        <button class="head-bar__create-button" id="createButton">Tambah</button>
+        <form id="searchBook">
+            <input id="searchBookTitle" type="text" placeholder="Cari..." autocomplete="off">
+            <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+    </div>
+</header>
+<main>
+    <div class="input-section" id="inputSection">
+        <h2>Form Buku</h2>
+        <form id="inputBook">
+            <div class="input">
+                <label for="inputBookTitle">Judul Buku</label>
+                <input id="inputBookTitle" type="text" required placeholder="Judul buku...">
+            </div>
+            <div class="input">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text" required placeholder="Penulis...">
+            </div>
+            <div class="input">
+                <label for="inputBookYear">Tahun Terbit</label>
+                <input id="inputBookYear" type="number" required placeholder="Tahun terbit...">
+            </div>
+            <div class="input--inline">
+                <label for="inputBookIsComplete">Selesai dibaca</label>
+                <input id="inputBookIsComplete" type="checkbox">
+            </div>
+            <div class="input-action">
+                <button id="bookSubmit" type="submit">Simpan</button>
+                <button id="bookCancel" type="button">Batal</button>
+            </div>
+        </form>
+    </div>
+    <div class="split-bookshelf">
+        <section class="bookshelf">
+            <h2>Belum/Sedang dibaca</h2>
+    
+            <div id="incompleteBookshelfList" class="book-list">
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section class="bookshelf">
+            <h2>Selesai dibaca</h2>
+    
+            <div id="completeBookshelfList" class="book-list">
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
